@@ -148,7 +148,6 @@ Cards
   text-align: center;
 }
 .cards-center{
-  display: grid;
   width: 80vw;
   max-width: 1170px;
   margin:2rem auto;
@@ -168,4 +167,27 @@ Cards
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   color: var(--primaryColor)
+}
+/*@media screen and (min-width: 768px) {
+  .cards-center{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .cards-center{
+  grid-template-columns: 1fr 1fr 1fr;
+  }
+}*/
+
+
+.cards-center{
+  display: grid;
+  grid-column-gap: 2rem;
+  /*three column layout (1170-64)/3=368 */
+  /*grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));*/
+  /*grid-template-columns: repeat(auto-fill, minmax(368px, 1fr))*/
+  /*four column layout (1170-96)/4=268.5 */
+  grid-template-columns: repeat(auto-fit, minmax(268.5px, 1fr));
 }
